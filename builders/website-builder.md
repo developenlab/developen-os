@@ -56,7 +56,31 @@ Una pregunta a la vez. No continuar hasta tener la respuesta.
 **Pregunta 3:** ¿Cuál es el resultado principal que obtiene tu cliente?
 (Ejemplo: "Hablar inglés con confianza en 8 semanas")
 
-**Pregunta 4:** ¿Cuáles son tus colores de marca?
+**Pregunta 4:** ¿Cuáles son tus datos de contacto?
+
+```
+Comparte los que tengas, omite los que no:
+
+📱 WhatsApp: 
+📧 Email:
+📍 Dirección (si tienes presencial):
+🕐 Horarios de atención:
+```
+
+**Pregunta 5:** ¿En qué redes sociales estás?
+
+```
+Comparte las URLs completas de las que tengas:
+
+📘 Facebook:
+📸 Instagram:
+🎵 TikTok:
+▶️ YouTube:
+💼 LinkedIn:
+🐦 X (Twitter):
+```
+
+**Pregunta 6:** ¿Cuáles son tus colores de marca?
 
 Presentar estas opciones:
 
