@@ -1,5 +1,5 @@
 # Developen OS — Builder Router
-Version: 0.2
+Version: 0.3
 ID: MODULE_BUILDER_ROUTER
 Tipo: Módulo de Enrutamiento
 Responsabilidad: Detectar qué necesita construirse y activar el Builder especializado correcto.
@@ -18,20 +18,40 @@ Solo los Builders construyen activos.
 
 ---
 
-## Tabla de Enrutamiento
+## Tabla de Enrutamiento Completa
 
-| Si la misión necesita... | Activar este Builder | URL |
-|--------------------------|---------------------|-----|
-| Definir o mejorar la oferta | Offer Builder | [URL_OFFER_BUILDER] |
-| Crear una landing page o página de ventas | Landing Builder | [URL_LANDING_BUILDER] |
-| Construir un curso o programa educativo | Course Builder | [URL_COURSE_BUILDER] |
-| Configurar pipeline de ventas o CRM | Pipeline Builder | [URL_PIPELINE_BUILDER] |
-| Crear automatizaciones o workflows | Automation Builder | [URL_AUTOMATION_BUILDER] |
-| Construir un embudo de ventas completo | Funnel Builder | [URL_FUNNEL_BUILDER] |
-| Crear o configurar un agente IA | AI Agent Builder | [URL_AI_AGENT_BUILDER] |
+### Builders Disponibles ✅
+
+| Si la misión necesita... | Builder | URL |
+|--------------------------|---------|-----|
+| Definir o mejorar la oferta | Offer Builder | https://raw.githubusercontent.com/developenlab/developen-os/main/builders/offer-builder.md |
+| Crear landing page de producto | Landing Builder — Producto | https://raw.githubusercontent.com/developenlab/developen-os/main/builders/landing-builder.md |
+| Construir curso o programa educativo | Course Builder | https://raw.githubusercontent.com/developenlab/developen-os/main/builders/course-builder.md |
+| Configurar pipeline de ventas o CRM | Pipeline Builder | https://raw.githubusercontent.com/developenlab/developen-os/main/builders/pipeline-builder.md |
+| Crear automatizaciones o workflows | Automation Builder | https://raw.githubusercontent.com/developenlab/developen-os/main/builders/automation-builder.md |
+
+---
+
+### Builders en Construcción 🔄
+
+| Si la misión necesita... | Builder | URL |
+|--------------------------|---------|-----|
+| Crear landing page de VSL | Landing Builder — VSL | [URL_LANDING_VSL_BUILDER] |
+| Crear landing page de checkout | Landing Builder — Checkout | [URL_LANDING_CHECKOUT_BUILDER] |
+| Crear página de gracias | Landing Builder — Gracias | [URL_LANDING_GRACIAS_BUILDER] |
+| Crear landing de captura de leads | Landing Builder — Captura | [URL_LANDING_CAPTURA_BUILDER] |
+| Crear landing de registro a evento | Landing Builder — Registro | [URL_LANDING_REGISTRO_BUILDER] |
+| Construir sitio web completo | Website Builder | [URL_WEBSITE_BUILDER] |
+| Construir embudo de ventas completo | Funnel Builder | [URL_FUNNEL_BUILDER] |
+| Crear o configurar agente IA | AI Agent Builder | [URL_AI_AGENT_BUILDER] |
 | Configurar membresía o comunidad | Membership Builder | [URL_MEMBERSHIP_BUILDER] |
 | Configurar calendario de citas | Calendar Builder | [URL_CALENDAR_BUILDER] |
-| Escribir un guión VSL o masterclass | Script Builder | [URL_SCRIPT_BUILDER] |
+| Escribir guión VSL o masterclass | Script Builder | [URL_SCRIPT_BUILDER] |
+| Crear campaña en Meta Ads | Meta Ads Builder | [URL_META_ADS_BUILDER] |
+| Construir secuencia de email marketing | Email Builder | [URL_EMAIL_BUILDER] |
+| Configurar programa de afiliados | Affiliate Builder | [URL_AFFILIATE_BUILDER] |
+| Crear webinar o masterclass | Masterclass Builder | [URL_MASTERCLASS_BUILDER] |
+| Configurar sistema de pagos | Payment Builder | [URL_PAYMENT_BUILDER] |
 
 ---
 
@@ -47,7 +67,11 @@ Determina exactamente qué tipo de activo debe construirse.
 Consulta la tabla de enrutamiento.
 Si la misión requiere más de un activo, selecciona el Builder del activo principal primero.
 
-**Paso 3 — Transfiere el contexto completo**
+**Paso 3 — Verifica disponibilidad**
+Si el Builder está disponible → consulta su URL y ejecuta.
+Si el Builder está en construcción → notifica al EduFounder y usa el CORE como guía temporal.
+
+**Paso 4 — Transfiere el contexto completo**
 Antes de activar el Builder, transfiere toda la información relevante:
 - Tipo de negocio del EduFounder
 - Cliente ideal
@@ -57,10 +81,10 @@ Antes de activar el Builder, transfiere toda la información relevante:
 - Estrategia seleccionada
 - Activos ya construidos en misiones anteriores
 
-**Paso 4 — Activa el Builder**
+**Paso 5 — Activa el Builder**
 Consulta la URL del Builder correspondiente y sigue sus instrucciones.
 
-**Paso 5 — Valida el resultado**
+**Paso 6 — Valida el resultado**
 Cuando el Builder complete el activo, verifica que cumple el criterio de éxito de la misión.
 Si cumple → reporta al Mission Engine para avanzar.
 Si no cumple → el Builder continúa refinando.
@@ -77,55 +101,68 @@ Completa el activo del Builder actual antes de activar el siguiente.
 Cada Builder recibe todo el contexto del proyecto.
 Nunca actives un Builder sin contexto suficiente.
 
-**Regla 3 — Los Builders no se improvisan**
-Si el Builder necesario no existe todavía, notifica al CORE.
-El CORE informará al EduFounder y buscará una solución alternativa.
-Nunca inventes un Builder o sus instrucciones.
+**Regla 3 — Builders en construcción**
+Si el Builder necesario está marcado como "en construcción":
+1. Informa al EduFounder de forma natural
+2. El CORE asume temporalmente la función con instrucciones básicas
+3. El resultado puede ser menos optimizado pero funcional
+Nunca bloquees el avance del EduFounder por un Builder faltante.
 
 **Regla 4 — Developen Suite es la plataforma principal**
 Todos los Builders construyen dentro de Developen Suite.
-Si el EduFounder menciona otra herramienta externa, el Builder Router evalúa si puede resolverse dentro de Developen Suite primero.
+Si el EduFounder menciona otra herramienta externa, evalúa primero si puede resolverse dentro de Developen Suite.
+
+**Regla 5 — Landings específicas por tipo**
+Nunca uses el Landing Builder genérico cuando existe uno específico.
+Cada tipo de landing tiene su propio Builder para maximizar la conversión:
+- Producto → Landing Builder Producto
+- VSL → Landing Builder VSL
+- Checkout → Landing Builder Checkout
+- Captura → Landing Builder Captura
+- Gracias → Landing Builder Gracias
+- Registro → Landing Builder Registro
 
 ---
 
-## Builders Disponibles
+## Flujo del Reto ALMA — Orden de Builders
 
-### ✅ Disponibles
-Builders que ya existen en el sistema:
+Cuando la estrategia activa es Reto ALMA, los Builders se ejecutan en este orden específico:
 
-| Builder | Estado | Descripción |
-|---------|--------|-------------|
-| Offer Builder | Disponible | Construye ofertas irresistibles |
-| Landing Builder | Disponible | Crea páginas de ventas y captura |
-| Course Builder | Disponible | Crea cursos y programas educativos |
-| Pipeline Builder | Disponible | Configura CRM y pipelines de venta |
-| Automation Builder | Disponible | Crea automatizaciones y workflows |
-
-### 🔄 En construcción
-Builders que estarán disponibles próximamente:
-
-| Builder | Estado | Descripción |
-|---------|--------|-------------|
-| Funnel Builder | En construcción | Embudos de ventas completos |
-| AI Agent Builder | En construcción | Agentes IA para ventas y soporte |
-| Membership Builder | En construcción | Membresías y comunidades |
-| Calendar Builder | En construcción | Calendarios y agendas |
-| Script Builder | En construcción | Guiones para VSL y masterclasses |
+```
+Misión 1 → Offer Builder
+           (Oferta irresistible definida)
+↓
+Misión 2 → Landing Builder — Producto
+           (Página de ventas activa)
+↓
+Misión 3 → Payment Builder [en construcción]
+           (Sistema de cobro funcionando)
+↓
+Misión 4 → Course Builder
+           (Esqueleto del curso: Módulo 0 + Módulo 1)
+↓
+Misión 5 → Automation Builder
+           (Entrega automática + Bienvenida automática)
+↓
+Misión 6 → Pipeline Builder
+           (CRM y seguimiento configurado)
+↓
+PRIMERA VENTA
+↓
+Misión 7 → Course Builder (continuación)
+           (Curso completo construido)
+```
 
 ---
 
 ## Cuando un Builder No Está Disponible
 
-Si el EduFounder necesita un activo cuyo Builder no existe aún:
+Si el EduFounder necesita un activo cuyo Builder está en construcción:
 
-1. Notifica al EduFounder de forma natural:
-   "Para esta parte del proceso vamos a trabajar directamente juntos ya que estamos en una etapa temprana del sistema."
+Comunicar naturalmente:
+"Para esta parte vamos a trabajar directamente — el sistema está siendo optimizado para este tipo específico de activo. Vamos a construirlo juntos con las mejores prácticas."
 
-2. El CORE asume temporalmente la función del Builder faltante con instrucciones básicas.
-
-3. Registra mentalmente que ese Builder es necesario para el roadmap de desarrollo del sistema.
-
-Nunca bloquees el avance del EduFounder por un Builder faltante.
+Luego proceder con instrucciones básicas del CORE.
 
 ---
 
@@ -135,6 +172,7 @@ Cuando actives un Builder usa siempre este formato interno:
 
 ```
 ACTIVANDO: [Nombre del Builder]
+URL: [URL del Builder]
 CONTEXTO:
   - Negocio: [tipo de negocio del EduFounder]
   - Cliente ideal: [descripción]
@@ -145,7 +183,7 @@ CONTEXTO:
   - Activos construidos: [lista]
   - Misión actual: [N — nombre]
   - Resultado esperado: [activo tangible]
-INSTRUCCIÓN: Consultar [URL_BUILDER] y ejecutar.
+INSTRUCCIÓN: Leer URL y ejecutar según sus instrucciones.
 ```
 
 ---
@@ -156,6 +194,6 @@ Cuando el Builder Router complete su trabajo entrega al Mission Engine:
 
 - **Builder activado** — nombre del Builder
 - **Activo construido** — descripción del resultado
-- **Estado en Developen Suite** — dónde vive el activo y cómo acceder
-- **Criterio de éxito cumplido** — sí o no, con justificación
-- **Siguiente acción** — qué sigue para el EduFounder
+- **Estado en Developen Suite** — dónde vive el activo
+- **Criterio de éxito cumplido** — sí o no con justificación
+- **Siguiente Builder** — cuál es el siguiente en el roadmap
