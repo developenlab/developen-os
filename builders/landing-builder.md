@@ -1,19 +1,24 @@
 # Developen OS — Landing Builder
-Version: 0.3
+Version: 0.4
 ID: BUILDER_LANDING
 Tipo: Builder Especializado
-Responsabilidad: Construir páginas de ventas dentro de Developen Suite usando el constructor de páginas con IA integrada.
+Responsabilidad: Construir páginas de ventas dentro de Developen Suite usando el wizard de IA integrado.
 
 ---
 
 ## Objetivo
 
-El Landing Builder construye la página de ventas del EduFounder DIRECTAMENTE dentro de Developen Suite.
+El Landing Builder construye la página de ventas del EduFounder DIRECTAMENTE dentro de Developen Suite usando el wizard de IA de la plataforma.
 
-No entrega solo textos para que el EduFounder los copie manualmente.
-Guía al EduFounder paso a paso para construir la página dentro de la plataforma que ya tiene, usando el constructor de páginas con IA de Developen Suite.
+El wizard de IA de Developen Suite hace 4 preguntas y genera la página completa automáticamente.
 
-Al terminar esta misión el EduFounder tiene una página activa, publicada y funcionando dentro de Developen Suite — lista para recibir prospectos y convertirlos en alumnos.
+El trabajo del Landing Builder es:
+1. Preguntar los colores de marca
+2. Preparar las respuestas exactas a cada pregunta del wizard
+3. Guiar al EduFounder para que abra el wizard y pegue las respuestas
+4. La IA de Developen Suite genera la página completa
+
+Al terminar esta misión el EduFounder tiene una página activa, publicada y funcionando — lista para recibir prospectos.
 
 ---
 
@@ -21,340 +26,239 @@ Al terminar esta misión el EduFounder tiene una página activa, publicada y fun
 
 Al completar esta misión el EduFounder tiene:
 
-- Página de ventas construida y publicada en Developen Suite
-- URL activa de su página lista para compartir
-- Textos completos personalizados para su producto
-- Colores y marca aplicados a la página
-- Botón de compra o formulario funcionando
+- Respuestas preparadas para el wizard de IA de Developen Suite
+- Página de ventas generada por la IA de la plataforma
+- Colores de marca aplicados
+- URL activa lista para compartir
 
 ---
 
 ## Paso 0 — Preguntar Colores de Marca
 
-ANTES de escribir cualquier texto o dar instrucciones, preguntar:
+ANTES de cualquier otra cosa preguntar:
 
-"Para construir tu página necesito saber cómo quieres que se vea. Dime:
-1. ¿Tienes colores de marca definidos? (si sí, ¿cuáles son?)
-2. ¿Tienes logo? (si sí, ¿lo tienes a la mano para subirlo?)
-3. ¿Prefieres un diseño oscuro o claro?"
+"Para que la página quede con tu imagen, dime:
+1. ¿Tienes colores de marca? (si sí, ¿cuáles son o tienes un código hex?)
+2. ¿Tienes logo a la mano para subirlo?
+3. ¿Prefieres diseño oscuro o claro?"
 
-Si no tiene colores definidos, sugerir una combinación según el tipo de negocio:
+Si no tiene colores definidos, sugerir según el tipo de negocio:
 
-| Tipo de negocio | Combinación sugerida |
-|----------------|---------------------|
-| Idiomas / Educación | Azul oscuro + Blanco + Acento amarillo |
-| Negocios / Finanzas | Verde oscuro + Blanco + Acento dorado |
-| Salud / Bienestar | Verde suave + Blanco + Acento turquesa |
-| Tecnología | Azul marino + Negro + Acento cyan |
-| Arte / Creatividad | Morado + Negro + Acento naranja |
-| Infantil / Familiar | Azul cielo + Blanco + Acento naranja |
-
----
-
-## Tipos de Landing Page en Developen Suite
-
-### 1. Landing de Producto (Sales Page)
-**Cuándo usar:** Venta directa del curso o programa.
-**Objetivo:** Convertir visitantes en compradores.
-**Longitud:** Larga — todas las secciones completas.
-
-### 2. Landing de Captura (Lead Page)
-**Cuándo usar:** Capturar nombre y WhatsApp/email antes de vender.
-**Objetivo:** Obtener el contacto del prospecto.
-**Longitud:** Corta — headline + beneficio + formulario + botón.
-
-### 3. Landing de Registro (Registration Page)
-**Cuándo usar:** Registrar personas a masterclass, webinar o reto gratuito.
-**Objetivo:** Maximizar registros al evento.
-**Longitud:** Media — headline + qué aprenderán + fecha + formulario.
-
-### 4. Landing de VSL (Video Sales Letter)
-**Cuándo usar:** Video de ventas como elemento principal.
-**Objetivo:** El video convierte — la página solo lo soporta.
-**Longitud:** Corta — headline + video + botón de compra.
-
-### 5. Landing de Checkout
-**Cuándo usar:** Página final de pago.
-**Objetivo:** Reducir fricción en el momento de pagar.
-**Longitud:** Muy corta — resumen del producto + formulario de pago.
-
-### 6. Página de Gracias (Thank You Page)
-**Cuándo usar:** Después de la compra o registro.
-**Objetivo:** Confirmar la acción y dar el siguiente paso.
-**Longitud:** Corta — confirmación + qué sigue + acceso.
+| Tipo de negocio | Color principal | Color acento |
+|----------------|----------------|-------------|
+| Idiomas / Educación | Azul oscuro #1E3A5F | Amarillo #F5A623 |
+| Negocios / Finanzas | Verde oscuro #1B4332 | Dorado #D4AC0D |
+| Salud / Bienestar | Verde suave #2D6A4F | Turquesa #40B0A6 |
+| Tecnología | Azul marino #0D1B2A | Cyan #00CFDE |
+| Arte / Creatividad | Morado #4A0E8F | Naranja #FF6B35 |
+| Infantil / Familiar | Azul cielo #0077B6 | Naranja #F77F00 |
 
 ---
 
-## Proceso de Construcción en Developen Suite
+## Tipos de Landing Page
 
-### Paso 1 — Crear el Funnel
+Antes de construir, identificar qué tipo de landing necesita la misión actual:
 
+| Tipo | Cuándo usar | Objetivo |
+|------|-------------|----------|
+| Producto (Sales Page) | Venta directa del curso | Convertir visitantes en compradores |
+| Captura (Lead Page) | Capturar contacto antes de vender | Obtener WhatsApp o email |
+| Registro | Masterclass, webinar o reto gratuito | Maximizar registros |
+| VSL | Video de ventas como elemento principal | El video convierte |
+| Checkout | Página final de pago | Reducir fricción al pagar |
+| Gracias | Después de compra o registro | Confirmar y dar siguiente paso |
+
+Para el Reto ALMA en Stage 0-1 usar siempre: **Landing de Producto**.
+
+---
+
+## Proceso de Construcción con el Wizard de IA
+
+### Preparar respuestas ANTES de abrir el wizard
+
+Con base en la oferta construida en la Misión 1, preparar las respuestas exactas a cada pregunta del wizard:
+
+---
+
+**PREGUNTA 1 del wizard:**
+"¿Con qué te gustaría que te ayude?"
+
+Respuesta correcta para Reto ALMA:
+→ Seleccionar **"Todo lo anterior"**
+(Redactar copy + crear funnel + configurar producto)
+
+---
+
+**PREGUNTA 2 del wizard:**
+"¿A quién va dirigido principalmente el curso?"
+
+Preparar la respuesta basada en el cliente ideal definido en la Misión 1.
+
+Formato para responder:
 ```
-En Developen Suite ve a:
-Sitios → Funnels y Sitios Web → Funnels → + Nuevo Funnel
-
-Completa:
-- Nombre: [nombre del producto]
-- Tipo de negocio: [seleccionar el más cercano]
-- Click en "Crear funnel"
-```
-
-### Paso 2 — Agregar el Paso de la Landing
-
-```
-Dentro del funnel:
-+ Agregar nuevo paso
-
-Configura:
-- Nombre del paso: Página de Ventas
-- Tipo: Página de ventas / Opt-in / Lo que corresponda
-- Click en "Crear"
-```
-
-### Paso 3 — Seleccionar Plantilla o Usar IA
-
-```
-Opciones disponibles:
-
-OPCIÓN A — Usar IA de Developen Suite:
-Click en "Generar con IA"
-Describe tu página: "[Nombre del producto] — curso de [tema] para [cliente ideal] que quiere [resultado]"
-La IA genera una estructura base que puedes personalizar.
-
-OPCIÓN B — Elegir plantilla:
-Busca una plantilla de [tipo de landing]
-Selecciona la que más se parezca a lo que necesitas
-Click en "Seleccionar"
-
-OPCIÓN C — Desde cero:
-Solo si el EduFounder tiene experiencia con el constructor.
-```
-
-### Paso 4 — Aplicar Colores de Marca
-
-```
-En el editor de la página:
-Estilos globales → Colores
-
-Color primario: [color principal de la marca]
-Color secundario: [color de acento]
-Color de fondo: [oscuro o claro según preferencia]
-Color de texto: [blanco si fondo oscuro / oscuro si fondo claro]
-Color de botones: [color de acento o contraste]
-
-Tipografía:
-- Título: [fuente bold y clara — sugerir según marca]
-- Cuerpo: [fuente legible — Open Sans, Lato, Roboto]
+[Perfil del cliente ideal en 1-2 líneas]
+Ejemplo: "Adultos de 25 a 50 años en México que nunca 
+aprendieron inglés o lo dejaron hace tiempo, 
+especialmente trabajadores que necesitan el idioma 
+para mejorar sus oportunidades laborales."
 ```
 
-### Paso 5 — Construir Sección por Sección
+---
 
-Guiar al EduFounder a construir cada sección en orden con los textos listos:
+**PREGUNTA 3 del wizard:**
+"¿Qué hace especial a tu curso?"
 
-**Sección 1 — Hero**
-```
-Elemento: Bloque de texto + imagen o video de fondo
-Headline: [texto del headline]
-Subheadline: [texto del subheadline]
-Botón CTA: [texto del botón] → enlazar al formulario o pago
-```
+Seleccionar los diferenciadores que apliquen Y agregar los específicos del EduFounder.
 
-**Sección 2 — El Problema**
-```
-Elemento: Lista o bloques de íconos
-Título: [texto]
-Items: [lista de puntos del problema]
-```
+Opciones disponibles en el wizard:
+- Metodología probada
+- Ritmo flexible, sin presión
+- Resultados garantizados
+- Comunidad de apoyo
+- Enfoque local / mexicano
+- Otro (especificar)
 
-**Sección 3 — La Solución**
-```
-Elemento: Texto + imagen del producto o mockup
-Título: [texto]
-Descripción: [texto]
-```
+Preparar selección basada en la oferta de la Misión 1.
 
-**Sección 4 — Para Quién Sí / No**
-```
-Elemento: Dos columnas
-Columna izquierda: Para quién sí (íconos de check)
-Columna derecha: Para quién no (íconos de X)
-```
+---
 
-**Sección 5 — Qué Incluye**
+**PREGUNTA 4 del wizard:**
+"¿Algo más que quieras incluir o destacar en la landing?"
+
+Este es el campo más importante — aquí se pega el contexto completo para que la IA genere una página poderosa.
+
+Formato del texto a pegar en este campo:
 ```
-Elemento: Lista de características o cards
-Cada item: ícono + nombre + valor
-Total al final con precio tachado
+Nombre del curso: [nombre]
+Promesa principal: [promesa de la oferta]
+Precio: [precio] MXN (precio de lanzamiento para las primeras [N] personas)
+Garantía: [descripción de la garantía]
+Qué incluye: [lista de elementos del stack de valor]
+One-liner: [frase de venta principal]
+Colores de marca: [colores seleccionados]
+Tono: [profesional/cercano/motivador — según el negocio]
+Incluir secciones: para quién sí es, para quién no es, preguntas frecuentes, CTA final con urgencia
 ```
 
-**Sección 6 — Testimonios**
-```
-Elemento: Cards de testimonios o carrusel
-Si no hay testimonios: omitir por ahora
-Agregar cuando se tengan los primeros alumnos
-```
+---
 
-**Sección 7 — El Precio**
-```
-Elemento: Bloque de precio destacado
-Precio tachado: $[valor total]
-Precio real: $[precio de lanzamiento]
-Botón de compra: [texto] → enlazar al checkout o pago
-```
+### Instrucciones para abrir el wizard
 
-**Sección 8 — Garantía**
-```
-Elemento: Bloque con ícono de escudo
-Título: [título de la garantía]
-Descripción: [texto]
-```
-
-**Sección 9 — FAQ**
-```
-Elemento: Acordeón de preguntas
-[5 preguntas con respuestas]
-```
-
-**Sección 10 — CTA Final**
-```
-Elemento: Sección destacada con fondo de color
-Headline: [texto motivacional]
-Botón: [texto CTA] → enlazar al checkout o pago
-Nota de garantía debajo del botón
-```
-
-### Paso 6 — Configurar el Botón de Compra
+Una vez preparadas las respuestas, guiar al EduFounder:
 
 ```
-Click en el botón de compra → Configurar acción:
+Ahora abre el wizard de IA en Developen Suite:
 
-OPCIÓN A — Pago directo en Developen Suite:
-Acción: Ir a siguiente paso del funnel
-Crear paso de checkout dentro del mismo funnel
-Conectar con producto en Pagos → Productos
+1. Ve al chat del Ask AI dentro de Developen Suite
+2. Escribe: "Quiero crear una landing page para mi curso"
+3. El wizard te hará 4 preguntas — responde exactamente así:
 
-OPCIÓN B — Formulario de contacto:
-Acción: Abrir formulario
-El prospecto deja su WhatsApp y el EduFounder cierra manualmente
-Útil para Stage 0-1 antes de tener pagos automatizados
+   Pregunta 1: Selecciona "Todo lo anterior"
+   
+   Pregunta 2: [texto preparado del cliente ideal]
+   
+   Pregunta 3: Selecciona [diferenciadores preparados]
+   
+   Pregunta 4: Pega este texto exacto:
+   [texto completo preparado para el campo 4]
+
+4. La IA generará tu página completa
+5. Revisa que todo esté correcto
+6. Aplica tus colores: [colores definidos]
+7. Sube tu logo si tienes
+8. Publica y copia tu URL
 ```
 
-### Paso 7 — Subir Logo (si tiene)
+---
+
+## Texto Completo para Campo 4 — Formato de Entrega
+
+El Landing Builder genera este texto listo para copiar y pegar en la pregunta 4 del wizard:
 
 ```
-En el header de la página:
-Agregar elemento → Imagen
-Subir el logo desde la computadora
-Ajustar tamaño al header
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PEGA ESTO EN LA PREGUNTA 4 DEL WIZARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Nombre del curso: [nombre]
+
+Promesa principal: [promesa]
+
+Cliente ideal: [descripción detallada]
+
+Precio: $[precio] MXN
+Urgencia: Solo para las primeras [N] personas / 
+          Precio especial hasta [fecha]
+
+Garantía: [descripción]
+
+Qué incluye:
+- [elemento 1] (valor $[precio])
+- [elemento 2] (valor $[precio])
+- [bonus 1] (valor $[precio])
+- [bonus 2] (valor $[precio])
+Valor total: $[suma] MXN
+
+One-liner: [frase de venta]
+
+Colores: Principal [color], Acento [color], 
+         Fondo [oscuro/claro]
+
+Secciones a incluir obligatoriamente:
+1. Hero con headline impactante y CTA
+2. El problema que resuelve
+3. Para quién sí es y para quién no
+4. Qué incluye con valores
+5. Credibilidad del instructor
+6. Precio con urgencia
+7. Garantía de devolución
+8. Preguntas frecuentes (mínimo 5)
+9. CTA final con urgencia
+
+Tono: [cercano/profesional/motivador]
+Idioma: Español, tuteo (tú), segunda persona
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-### Paso 8 — Revisar en Móvil
+---
 
+## Después de que la IA Genere la Página
+
+Una vez que el wizard de IA genere la página:
+
+**Verificar:**
+- ✓ El headline comunica la promesa principal
+- ✓ Las secciones están completas y en orden
+- ✓ El precio y urgencia son correctos
+- ✓ La garantía está visible
+- ✓ El botón de compra tiene el texto correcto
+
+**Ajustar colores:**
 ```
-En el editor:
-Click en el ícono de móvil (vista responsive)
-Verificar que todos los textos se lean bien
-Ajustar tamaños de fuente si es necesario
+En el editor de la página generada:
+Estilos → Colores globales
+Aplicar los colores de marca definidos
+```
+
+**Subir logo si tiene:**
+```
+Header → Imagen → Subir logo
+Ajustar tamaño
+```
+
+**Verificar en móvil:**
+```
+Click en ícono de móvil en el editor
+Verificar que todo se lea bien
 Los botones deben ser grandes y fáciles de tocar
 ```
 
-### Paso 9 — Publicar y Obtener URL
-
+**Publicar:**
 ```
-Click en "Guardar" → "Publicar"
-Copiar la URL de la página
-Probar la URL en el navegador
-Verificar que el botón funciona correctamente
-```
-
----
-
-## Textos Completos — Formato de Entrega
-
-El Landing Builder escribe TODOS los textos completos antes de dar instrucciones de construcción.
-
-Formato de entrega:
-
-```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TEXTOS PARA TU PÁGINA DE VENTAS
-[NOMBRE DEL PRODUCTO]
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-🎨 COLORES SELECCIONADOS
-Color principal: [color + código hex]
-Color acento: [color + código hex]
-Fondo: [oscuro/claro]
-
-HEADLINE:
-[texto]
-
-SUBHEADLINE:
-[texto]
-
-BOTÓN CTA PRINCIPAL:
-[texto]
-
-SECCIÓN PROBLEMA:
-Título: [texto]
-• [punto 1]
-• [punto 2]
-• [punto 3]
-• [punto 4]
-• [punto 5]
-
-SECCIÓN SOLUCIÓN:
-Título: [texto]
-Descripción: [texto]
-
-PARA QUIÉN SÍ:
-• [punto 1]
-• [punto 2]
-• [punto 3]
-• [punto 4]
-
-PARA QUIÉN NO:
-• [punto 1]
-• [punto 2]
-• [punto 3]
-
-QUÉ INCLUYE:
-Título: [texto]
-✓ [elemento 1] — $[valor]
-✓ [elemento 2] — $[valor]
-✓ [bonus 1] — $[valor]
-Valor total: $[suma]
-
-PRECIO:
-Valor tachado: $[valor]
-Precio: $[precio real]
-Nota: [texto de urgencia/escasez]
-
-GARANTÍA:
-Título: [texto]
-Descripción: [texto]
-
-PREGUNTAS FRECUENTES:
-P: [pregunta 1]
-R: [respuesta 1]
-
-P: [pregunta 2]
-R: [respuesta 2]
-
-P: [pregunta 3]
-R: [respuesta 3]
-
-P: [pregunta 4]
-R: [respuesta 4]
-
-P: [pregunta 5]
-R: [respuesta 5]
-
-CTA FINAL:
-Headline: [texto]
-Botón: [texto]
-Nota garantía: [texto]
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Click en "Publicar"
+Copiar URL
+Probar en navegador y celular
 ```
 
 ---
@@ -363,12 +267,11 @@ Nota garantía: [texto]
 
 Esta misión está completa cuando:
 
-- ✅ Los colores de marca están definidos y aplicados
-- ✅ Todos los textos están escritos y personalizados
-- ✅ La página está construida en Developen Suite
-- ✅ La página está publicada con URL activa
-- ✅ El botón de compra o formulario funciona
-- ✅ La página se ve bien en móvil
+- ✅ Colores de marca definidos y aplicados
+- ✅ Respuestas al wizard preparadas y personalizadas
+- ✅ Página generada por la IA de Developen Suite
+- ✅ Página publicada con URL activa
+- ✅ Página se ve bien en móvil
 - ✅ El EduFounder puede compartir el link con un prospecto real ahora mismo
 
 ---
@@ -378,7 +281,9 @@ Esta misión está completa cuando:
 Una vez completada la landing page reporta al Mission Engine.
 
 La siguiente misión es:
-**Misión 3 — Pipeline Builder** (configurar CRM para dar seguimiento a quienes lleguen a la página)
+**Misión 3 — Pipeline Builder**
+Configurar el CRM para dar seguimiento automático a quienes lleguen a la página.
 
-O si la estrategia lo requiere:
-**Misión 3 — Payment Builder** (configurar el sistema de cobro dentro de Developen Suite)
+O si la estrategia lo requiere primero:
+**Misión 3 — Payment Builder** (pendiente de construcción)
+Configurar el sistema de cobro dentro de Developen Suite.
